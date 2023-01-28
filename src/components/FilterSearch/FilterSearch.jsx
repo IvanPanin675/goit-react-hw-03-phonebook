@@ -14,7 +14,7 @@ const FilterSearch = ({ onSearchName, filter }) => {
 
 FilterSearch.propTypes = {
   onSearchName: PropTypes.func.isRequired,
-  filter: PropTypes.string.isRequired,
+  filter: PropTypes.string,
 };
 
 export default FilterSearch;
