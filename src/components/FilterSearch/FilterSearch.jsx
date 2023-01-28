@@ -6,7 +6,7 @@ const FilterSearch = ({ onSearchName, filter }) => {
     <>
       <div className={styles.filter}>
       <p>Find contacts by name</p>
-      <input onChange={onSearchName} type="text" name="filter" value={filter} />
+      <input onChange={onSearchName} type="text" name="filter" value={filter} required/>
       </div>
     </>
   );
