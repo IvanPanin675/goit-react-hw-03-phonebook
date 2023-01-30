@@ -19,14 +19,15 @@ export class App extends Component {
   componentDidMount() {
     const contacts = JSON.parse(localStorage.getItem('contacts'));
     if (contacts) {
-      this.setState({ contacts })
+      this.setState({ contacts });
     }
-    
   }
 
-  componentDidUpdate() {
+  componentDidUpdate(prevState) {
     const { contacts } = this.state;
-    localStorage.setItem('contacts', JSON.stringify(contacts));
+    if (prevState.contacts !== contacts) {
+      localStorage.setItem('contacts', JSON.stringify(contacts));
+    }
   }
 
   onHandleSubmit = data => {
